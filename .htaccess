@@ -1,0 +1,11 @@
+RewriteEngine On
+RewriteBase /
+
+RewriteRule ^create_short_url.*$ /index.php?create=true [QSA,L]
+RewriteRule ^remove/([A-Za-z0-9/-]+).*$ /index.php?remove=true&id=$1 [QSA,L]
+RewriteRule ^retrieve_text/([A-Za-z0-9/-]+).*$ /index.php?get=true&id=$1 [QSA,L]
+RewriteRule ^stats.*$ /index.php?stats=true [QSA,L]
+RewriteRule ^all.*$ /index.php?all=true [QSA,L]
+RewriteRule ^tests.*$ /_tests.php
+
+ErrorDocument 404 /index.php
