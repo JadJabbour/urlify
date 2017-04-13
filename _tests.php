@@ -197,7 +197,7 @@
 
 			}).always(function(data){
 				page.parse_output(data, 'output', scenario.name);
-				page.current_scenario++
+				page.current_scenario++;
 				page.run_scenario(page.current_scenario);
 			});
 		}
